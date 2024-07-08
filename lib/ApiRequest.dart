@@ -21,7 +21,7 @@ class ApiRequest{
     try{
       var response = await http.post(Uri.parse(url), body: data);
       if(response.statusCode ==200){
-        final responseBody = jsonDecode(response.body);
+        var responseBody = jsonDecode(response.body);
         log("mohamed = ${responseBody["status"]}");
         return responseBody;
       }else{
